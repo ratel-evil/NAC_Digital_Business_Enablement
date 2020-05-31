@@ -7,9 +7,9 @@ import com.sun.jersey.api.client.WebResource;
 import br.com.fiap.to.VendaTO;
 
 public class Atualizar {
-	private static Client client = Client.create();
+	private Client client = Client.create();
 	
-	public static int putService(VendaTO venda) {
+	public int putService(VendaTO venda) {
 				
 		WebResource resource = client.resource("http://localhost:8080/ItaloChagasRM82198Server/rest/venda/"+ venda.getCodigo());
 		

@@ -76,15 +76,6 @@ public class VendaDAOImpl implements VendaDAO{
 			listaVenda.add(venda);
 			
 			venda = new VendaTO();
-			venda.setCodigo(6);
-			venda.setNomeCliente("Arthur");
-			c.set(2020, Calendar.JANUARY, 22);
-			venda.setData(c.getTime());			venda.setDescricao("HeadSet wireless Logitech 953");
-			venda.setStatus(false);
-			venda.setValor(500.50);
-			listaVenda.add(venda);
-			
-			venda = new VendaTO();
 			venda.setCodigo(7);
 			venda.setNomeCliente("Renan");
 			c.set(2020, Calendar.JANUARY, 22);

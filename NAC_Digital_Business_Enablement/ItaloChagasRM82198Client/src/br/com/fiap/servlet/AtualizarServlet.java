@@ -58,7 +58,8 @@ public class AtualizarServlet extends HttpServlet{
 
 		
 		VendaTO venda = new VendaTO(codigo, nome, dataVenda, descricao, preco, foiPago);
-		Atualizar.putService(venda);
+		Atualizar atualizar = new Atualizar();
+		atualizar.putService(venda);
 		
 		req.getRequestDispatcher("AlterarSucesso.jsp").forward(req, resp);	
 

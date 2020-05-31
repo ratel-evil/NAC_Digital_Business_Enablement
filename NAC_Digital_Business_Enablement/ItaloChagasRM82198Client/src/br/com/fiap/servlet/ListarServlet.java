@@ -24,15 +24,23 @@ public class ListarServlet extends HttpServlet{
 		
 		Integer id = null;
 		if(req.getParameter("id") != null) {
-			id = Integer.parseInt(req.getParameter("id"));
+			if (!req.getParameter("id").isEmpty()) {
+				id = Integer.parseInt(req.getParameter("id"));
+				
+				System.out.println(id);
+			} 
+			
 		}
 		
 		if(id == null) {
 			VendaTO[] vendas = Consultar.getService();
 			req.setAttribute("vendas",vendas);
 		}else {
-			Consultar.getService(id);
+			VendaTO venda = Consultar.getService(id);
+			req.setAttribute("venda",venda);
 		}
+		
+		
 		
 		req.getRequestDispatcher("listadevendas.jsp").forward(req, resp);
 
