@@ -114,7 +114,5 @@
 
 	<script type="text/javascript" src="js/validaCampo.js"></script>
 </body>
-<footer >
-	<p>Lista de vendas</p>
-</footer>
+
 </html>
